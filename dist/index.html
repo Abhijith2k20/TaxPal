@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salient - Clone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-D2K0r7n_.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dyo0Eech.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="py-10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <nav class="relative z-50 flex justify-between">
+          <div class="flex items-center md:gap-x-12">
+            <a aria-label="Home" href="#">
+              <div class="h-10 w-10 bg-blue-600 rounded-full"></div> <!-- Placeholder Logo -->
+            </a>
+            <div class="hidden md:flex md:gap-x-6">
+              <a class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                href="#features">Features</a>
+              <a class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                href="#testimonials">Testimonials</a>
+              <a class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                href="#pricing">Pricing</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-x-5 md:gap-x-8">
+            <div class="hidden md:block">
+              <a class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                href="/login">Sign in</a>
+            </div>
+            <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-600 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600"
+              href="/register">
+              <span>Get started</span>
+              <span class="ml-3 text-blue-200 group-hover:text-blue-100">today</span>
+            </a>
+            <div class="-mr-1 md:hidden">
+              <!-- Mobile menu button placeholder -->
+              <button type="button" id="mobile-menu-btn"
+                class="relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
+                aria-label="Toggle Navigation">
+                <svg aria-hidden="true" class="h-3.5 w-3.5 overflow-visible stroke-slate-700" fill="none"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M0 1H14M0 7H14M0 13H14" class="origin-center transition"></path>
+                  <path d="M2 2L12 12M12 2L2 12" class="origin-center transition scale-90 opacity-0"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu"
+        class="fixed inset-0 z-40 hidden bg-slate-900/50 backdrop-blur-sm transition-opacity opacity-0"></div>
+      <div id="mobile-menu-panel"
+        class="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-slate-900/5 transition duration-150 ease-out scale-95 opacity-0 hidden">
+        <div class="flex flex-row-reverse items-center justify-between">
+          <button type="button" id="close-menu-btn" aria-label="Close menu" class="-m-1 p-1">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 text-slate-500">
+              <path d="m17.25 6.75-10.5 10.5M6.75 6.75l10.5 10.5" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <h2 class="text-sm font-medium text-slate-600">Navigation</h2>
+        </div>
+        <nav class="mt-6">
+          <ul class="-my-2 divide-y divide-slate-100 text-base text-slate-800">
+            <li><a class="block py-2" href="#features">Features</a></li>
+            <li><a class="block py-2" href="#testimonials">Testimonials</a></li>
+            <li><a class="block py-2" href="#pricing">Pricing</a></li>
+            <li><a class="block py-2" href="/login">Sign in</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-20 text-center lg:pt-32">
+        <h1 class="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
+          Accounting <span class="relative whitespace-nowrap text-blue-600"><svg aria-hidden="true" viewBox="0 0 418 42"
+              class="absolute left-0 top-2/3 h-[0.58em] w-full fill-blue-300/70" preserveAspectRatio="none">
+              <path
+                d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C46.117 16.233 14.567 21.536 3.797 25.476a2.27 2.27 0 0 1-1.452-4.293c12.269-4.487 48.332-10.53 72.013-14.347 23.681-3.817 115.45-12.09 191.927-10.825 68.192 1.128 174.16 11.623 147.613 33.423-14.526 11.926-69.765 14.225-109.62 10.075-39.855-4.15-68.636-18.045-48.644-32.344 19.992-14.299 92.86-7.077 130.449 12.576 37.589 19.653 12.743 33.633-15.228 34.979-27.971 1.346-77.19-5.001-119.985-18.194a2.27 2.27 0 0 1 1.352-4.351c40.352 12.439 86.382 18.375 111.452 17.168 15.135-.728 26.72-8.134 4.335-19.838-22.385-11.704-68.079-17.56-83.333-6.649-15.254 10.911 8.954 22.459 41.295 25.825 32.341 3.366 82.596 1.351 94.626-8.532 12.03-9.883-25.77-22.697-87.747-23.756Z">
+              </path>
+            </svg><span class="relative">made simple</span></span> for small businesses.
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
+          Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get
+          audited.
+        </p>
+        <div class="mt-10 flex justify-center gap-x-6">
+          <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900"
+            href="/register">Get 6 months free</a>
+          <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-white text-slate-900 ring-1 ring-slate-200 hover:ring-slate-300 hover:bg-slate-50 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><svg aria-hidden="true"
+              class="h-3 w-3 flex-none fill-blue-600 group-active:fill-current" viewBox="0 0 10 10">
+              <path
+                d="M5.555 1.777l3.333 3.333-3.333 3.333V6.111C2.778 6.111 1.111 7.778 1.111 9.444c0-2.778 1.667-5 4.444-5V1.777z">
+              </path>
+            </svg><span class="ml-3">Watch video</span></a>
+        </div>
+
+        <div class="mt-36 lg:mt-44">
+          <p class="font-display text-base text-slate-900">Trusted by these six companies so far</p>
+          <ul role="list"
+            class="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0">
+            <li>
+              <ul role="list" class="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0">
+                <li class="flex">
+                  <img alt="Transistor" src="/logo-transistor.png" class="h-12" loading="lazy">
+                </li>
+                <li class="flex">
+                  <img alt="Tuple" src="/logo-tuple.png" class="h-12" loading="lazy">
+                </li>
+                <li class="flex">
+                  <img alt="StaticKit" src="/logo-statickit.png" class="h-12" loading="lazy">
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul role="list" class="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0">
+                <li class="flex">
+                  <img alt="Mirage" src="/logo-mirage.png" class="h-12" loading="lazy">
+                </li>
+                <li class="flex">
+                  <img alt="Laravel" src="/logo-laravel.png" class="h-12" loading="lazy">
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <section id="features" aria-label="Features for running your books"
+        class="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32">
+        <div class="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
+          <img src="https://salient.tailwindui.com/_next/static/media/background-features.5f7a9ac9.jpg" alt=""
+            class="w-[90rem] max-w-none opacity-20" loading="lazy">
+        </div>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+          <div class="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
+            <h2 class="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">Everything you need to
+              run your books.</h2>
+            <p class="mt-6 text-lg tracking-tight text-blue-100">Well everything you need if you aren’t that picky about
+              minor details like tax compliance.</p>
+          </div>
+
+          <div class="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0">
+            <div class="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
+              <div
+                class="flex flex-auto flex-col gap-x-4 gap-y-1 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:gap-x-0 lg:mx-0 lg:block lg:gap-y-0 lg:gap-x-0">
+
+                <!-- Feature 1: Payroll -->
+                <div
+                  class="group relative rounded-3xl p-6 lg:py-10 lg:px-8 ring-1 ring-transparent hover:bg-white/5 transition duration-500 bg-white/10 ring-white/10 feature-tab active"
+                  data-target="feature-payroll">
+                  <h3>
+                    <button class="font-display text-lg [&:not(:focus-visible)]:focus:outline-none text-white">
+                      <span class="absolute inset-0 rounded-3xl"></span>
+                      Payroll
+                    </button>
+                  </h3>
+                  <p class="mt-2 text-sm text-blue-100 group-hover:text-white">
+                    Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not
+                    supported.
+                  </p>
+                </div>
+
+                <!-- Feature 2: Claim expenses -->
+                <div
+                  class="group relative rounded-3xl p-6 lg:py-10 lg:px-8 ring-1 ring-transparent hover:bg-white/5 transition duration-500 feature-tab"
+                  data-target="feature-expenses">
+                  <h3>
+                    <button
+                      class="font-display text-lg [&:not(:focus-visible)]:focus:outline-none text-blue-100 hover:text-white">
+                      <span class="absolute inset-0 rounded-3xl"></span>
+                      Claim expenses
+                    </button>
+                  </h3>
+                  <p class="mt-2 text-sm text-blue-100 group-hover:text-white">
+                    All of your receipts organized into one place, as long as you don't mind typing in the data by hand.
+                  </p>
+                </div>
+
+                <!-- Feature 3: VAT handling -->
+                <div
+                  class="group relative rounded-3xl p-6 lg:py-10 lg:px-8 ring-1 ring-transparent hover:bg-white/5 transition duration-500 feature-tab"
+                  data-target="feature-vat">
+                  <h3>
+                    <button
+                      class="font-display text-lg [&:not(:focus-visible)]:focus:outline-none text-blue-100 hover:text-white">
+                      <span class="absolute inset-0 rounded-3xl"></span>
+                      VAT handling
+                    </button>
+                  </h3>
+                  <p class="mt-2 text-sm text-blue-100 group-hover:text-white">
+                    We only sell our software to companies who don't deal with VAT at all, so technically we do all the
+                    VAT stuff they need.
+                  </p>
+                </div>
+
+                <!-- Feature 4: Reporting -->
+                <div
+                  class="group relative rounded-3xl p-6 lg:py-10 lg:px-8 ring-1 ring-transparent hover:bg-white/5 transition duration-500 feature-tab"
+                  data-target="feature-reporting">
+                  <h3>
+                    <button
+                      class="font-display text-lg [&:not(:focus-visible)]:focus:outline-none text-blue-100 hover:text-white">
+                      <span class="absolute inset-0 rounded-3xl"></span>
+                      Reporting
+                    </button>
+                  </h3>
+                  <p class="mt-2 text-sm text-blue-100 group-hover:text-white">
+                    Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with
+                    it.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="lg:col-span-7">
+              <!-- Feature Images -->
+              <div id="feature-payroll"
+                class="feature-panel relative rounded-xl lg:rounded-2xl overflow-hidden lg:w-[84rem] lg:h-[45rem] max-w-none">
+                <img class="w-full h-auto object-left-top rounded-xl lg:rounded-2xl" src="/feature-payroll.png"
+                  alt="Payroll interface" loading="lazy">
+              </div>
+              <div id="feature-expenses"
+                class="feature-panel hidden relative rounded-xl lg:rounded-2xl overflow-hidden lg:w-[84rem] lg:h-[45rem] max-w-none">
+                <img class="w-full h-auto object-left-top rounded-xl lg:rounded-2xl" src="/feature-expenses.png"
+                  alt="Expenses interface" loading="lazy">
+              </div>
+              <div id="feature-vat"
+                class="feature-panel hidden relative rounded-xl lg:rounded-2xl overflow-hidden lg:w-[84rem] lg:h-[45rem] max-w-none">
+                <img class="w-full h-auto object-left-top rounded-xl lg:rounded-2xl" src="/feature-vat.png"
+                  alt="VAT interface" loading="lazy">
+              </div>
+              <div id="feature-reporting"
+                class="feature-panel hidden relative rounded-xl lg:rounded-2xl overflow-hidden lg:w-[84rem] lg:h-[45rem] max-w-none">
+                <img class="w-full h-auto object-left-top rounded-xl lg:rounded-2xl" src="/feature-reporting.png"
+                  alt="Reporting interface" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Simplify Section (3 Columns) -->
+      <section id="simplify" aria-label="Simplify everyday business tasks" class="py-20 sm:py-32">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl md:text-center">
+            <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">Simplify everyday business
+              tasks.</h2>
+            <p class="mt-4 text-lg tracking-tight text-slate-700">Because you’d probably be a little confused if we
+              suggested you complicate your everyday business tasks instead.</p>
+          </div>
+          <div class="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+            <!-- Reporting -->
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center mb-6">
+                <svg aria-hidden="true" class="h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold text-blue-600">Reporting</h3>
+              <p class="mt-2 text-xl font-medium text-slate-900">Stay on top of things with always up-to-date reporting
+                features.</p>
+              <p class="mt-4 text-sm text-slate-600">We talked about reporting in the section above but we needed three
+                items here, so mentioning it one more time for posterity.</p>
+            </div>
+            <!-- Inventory -->
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-slate-500 flex items-center justify-center mb-6">
+                <svg aria-hidden="true" class="h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold text-slate-500">Inventory</h3>
+              <p class="mt-2 text-xl font-medium text-slate-900">Never lose track of what’s in stock with accurate
+                inventory tracking.</p>
+              <p class="mt-4 text-sm text-slate-600">We don’t offer this as part of our software but that statement is
+                inarguably true. Accurate inventory tracking would help you for sure.</p>
+            </div>
+            <!-- Contacts -->
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-slate-500 flex items-center justify-center mb-6">
+                <svg aria-hidden="true" class="h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold text-slate-500">Contacts</h3>
+              <p class="mt-2 text-xl font-medium text-slate-900">Organize all of your contacts, service providers, and
+                invoices in one place.</p>
+              <p class="mt-4 text-sm text-slate-600">This also isn’t actually a feature, it’s just some friendly advice.
+                We definitely recommend that you do this, you’ll feel really organized and professional.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Secondary Features Section (Tabs) -->
+      <section id="secondary-features" aria-label="Features for simplifying everyday business tasks"
+        class="pb-14 pt-0 sm:pb-20 sm:pt-0 lg:pb-32">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+
+          <!-- Panels -->
+          <div class="mt-0 relative overflow-hidden rounded-5xl bg-slate-200 px-6 py-16 sm:px-10 sm:py-24 lg:p-0">
+            <div class="absolute inset-0 bg-slate-200"></div>
+
+            <div
+              class="relative flex flex-col gap-6 lg:flex-row lg:gap-10 overflow-x-auto pb-4 lg:px-10 lg:py-24 no-scrollbar">
+              <!-- Profit & Loss Panel -->
+              <div
+                class="relative w-full lg:w-[50rem] flex-none rounded-3xl bg-white shadow-xl shadow-slate-900/5 ring-1 ring-slate-900/5">
+                <img class="w-full rounded-3xl" src="/profit-loss.png" alt="Profit and Loss Statement" loading="lazy">
+              </div>
+
+              <!-- Inventory Panel -->
+              <div
+                class="relative w-full lg:w-[50rem] flex-none rounded-3xl bg-white shadow-xl shadow-slate-900/5 ring-1 ring-slate-900/5">
+                <img class="w-full rounded-3xl" src="/inventory.png" alt="Inventory Management" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="get-started-today" class="relative overflow-hidden bg-blue-600 py-32">
+        <div class="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
+          <img src="https://salient.tailwindui.com/_next/static/media/background-call-to-action.6a5a5672.jpg" alt=""
+            class="w-[90rem] max-w-none" loading="lazy">
+        </div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <div class="mx-auto max-w-2xl">
+            <h2 class="font-display text-3xl tracking-tight text-white sm:text-4xl">Get started today</h2>
+            <p class="mt-4 text-lg tracking-tight text-white">It’s time to take control of your books. Buy our software
+              so you can feel like you’re doing something productive.</p>
+            <div class="mt-10 flex justify-center gap-x-6">
+              <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white"
+                href="/register">Get 6 months free</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" aria-label="What our customers are saying" class="bg-slate-50 py-20 sm:py-32">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl md:text-center">
+            <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">Loved by businesses everywhere.
+            </h2>
+            <p class="mt-4 text-lg tracking-tight text-slate-700">Our software is so simple that people can’t help but
+              fall in love with it. Simplicity is easy when you just skip tons of mission-critical features.</p>
+          </div>
+          <ul role="list"
+            class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3">
+            <!-- Column 1 -->
+            <li class="flex flex-col gap-y-6 sm:gap-y-8">
+              <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                <svg aria-hidden="true" width="105" height="78" class="absolute left-6 top-6 fill-slate-100">
+                  <path
+                    d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 2.712.904 5.273 2.712 7.684 1.808 2.41 4.52 3.616 8.136 3.616 2.41 0 4.52-.301 6.328-.904 1.959-.603 3.767-1.205 5.424-1.808 3.616-1.205 7.082-1.808 10.396-1.808 6.178 0 11.376 2.26 15.594 6.78 4.369 4.37 6.554 9.642 6.554 15.82 0 6.328-2.26 11.748-6.78 16.272-4.52 4.52-10.246 6.78-17.176 6.78-6.028 0-11.301-1.507-15.82-4.52-4.52-3.013-8.287-7.232-11.301-12.657-3.164-5.424-5.124-11.447-5.876-18.079-1.055-6.028-1.055-11.974 0-17.853l-1.356.678c-1.808 5.723-2.712 11.522-2.712 17.401 0 5.122.904 9.944 2.712 14.464 1.959 4.37 4.821 7.91 8.588 10.622 3.917 2.712 8.663 4.068 14.238 4.068 4.821 0 8.964-1.055 12.43-3.164 3.616-2.109 6.328-5.122 8.136-9.04 1.959-4.068 2.938-8.738 2.938-14.012 0-5.122-1.205-9.416-3.616-12.882-2.26-3.466-5.574-5.273-9.944-5.424-3.314 0-6.629.603-9.944 1.808-3.164 1.205-6.028 2.109-8.588 2.712-2.41.603-4.52.904-6.328.904-5.122 0-9.34-1.959-12.656-5.876-3.164-3.917-4.746-8.738-4.746-14.464 0-4.219.904-8.588 2.712-13.108 1.959-4.37 4.67-8.287 8.136-11.752 3.616-3.616 7.835-6.629 12.656-9.04 4.972-2.41 10.246-3.616 15.82-3.616 6.328 0 11.974 1.507 16.95 4.52 5.122 3.013 9.19 7.232 12.204 12.657 3.164 5.273 5.273 11.146 6.328 17.627 1.205 6.328 1.205 12.506 0 18.531l1.356-.678c1.808-5.723 2.712-11.522 2.712-17.401 0-5.122-.904-9.944-2.712-14.464-1.959-4.37-4.821-7.91-8.588-10.622-3.917-2.712-8.663-4.068-14.238-4.068-4.821 0-8.964 1.055-12.43 3.164-3.616 2.109-6.328 5.122-8.136 9.04-1.959 4.068-2.938 8.738-2.938 14.012 0 5.122 1.205 9.416 3.616 12.882 2.26 3.466 5.574 5.273 9.944 5.424 3.314 0 6.629-.603 9.944-1.808 3.164-1.205 6.028-2.109 8.588-2.712 2.41-.603 4.52-.904 6.328-.904 5.122 0 9.34 1.959 12.656 5.876 3.164 3.917 4.746 8.738 4.746 14.464 0 4.219-.904 8.588-2.712 13.108-1.959 4.37-4.67 8.287-8.136 11.752-3.616 3.616-7.835 6.629-12.656 9.04-4.972 2.41-10.246 3.616-15.82 3.616Z" />
+                </svg>
+                <blockquote class="relative">
+                  <p class="text-lg tracking-tight text-slate-900">
+                    TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government
+                    expects me to do.
+                  </p>
+                </blockquote>
+                <figcaption class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                  <div>
+                    <div class="font-display text-base text-slate-900">Sheryl Berge</div>
+                    <div class="mt-1 text-sm text-slate-500">CEO at Lynch LLC</div>
+                  </div>
+                  <div class="overflow-hidden rounded-full bg-slate-50">
+                    <img alt="" class="h-14 w-14 object-cover"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
+                  </div>
+                </figcaption>
+              </figure>
+
+              <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                <svg aria-hidden="true" width="105" height="78" class="absolute left-6 top-6 fill-slate-100">
+                  <path
+                    d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 2.712.904 5.273 2.712 7.684 1.808 2.41 4.52 3.616 8.136 3.616 2.41 0 4.52-.301 6.328-.904 1.959-.603 3.767-1.205 5.424-1.808 3.616-1.205 7.082-1.808 10.396-1.808 6.178 0 11.376 2.26 15.594 6.78 4.369 4.37 6.554 9.642 6.554 15.82 0 6.328-2.26 11.748-6.78 16.272-4.52 4.52-10.246 6.78-17.176 6.78-6.028 0-11.301-1.507-15.82-4.52-4.52-3.013-8.287-7.232-11.301-12.657-3.164-5.424-5.124-11.447-5.876-18.079-1.055-6.028-1.055-11.974 0-17.853l-1.356.678c-1.808 5.723-2.712 11.522-2.712 17.401 0 5.122.904 9.944 2.712 14.464 1.959 4.37 4.821 7.91 8.588 10.622 3.917 2.712 8.663 4.068 14.238 4.068 4.821 0 8.964-1.055 12.43-3.164 3.616-2.109 6.328-5.122 8.136-9.04 1.959-4.068 2.938-8.738 2.938-14.012 0-5.122-1.205-9.416-3.616-12.882-2.26-3.466-5.574-5.273-9.944-5.424-3.314 0-6.629.603-9.944 1.808-3.164 1.205-6.028 2.109-8.588 2.712-2.41.603-4.52.904-6.328.904-5.122 0-9.34-1.959-12.656-5.876-3.164-3.917-4.746-8.738-4.746-14.464 0-4.219.904-8.588-2.712-13.108-1.959 4.37 4.67-8.287 8.136-11.752 3.616-3.616 7.835-6.629 12.656-9.04 4.972-2.41 10.246-3.616 15.82-3.616 6.328 0 11.974 1.507 16.95 4.52 5.122 3.013 9.19 7.232 12.204 12.657 3.164 5.273 5.273 11.146 6.328 17.627 1.205 6.328 1.205 12.506 0 18.531l1.356-.678c1.808-5.723 2.712-11.522 2.712-17.401 0-5.122-.904-9.944-2.712-14.464-1.959-4.37-4.821-7.91-8.588-10.622-3.917-2.712-8.663-4.068-14.238-4.068-4.821 0-8.964 1.055-12.43 3.164-3.616 2.109-6.328 5.122-8.136 9.04-1.959 4.068-2.938 8.738-2.938 14.012 0 5.122 1.205 9.416 3.616 12.882 2.26 3.466 5.574 5.273 9.944 5.424 3.314 0 6.629-.603 9.944-1.808 3.164-1.205 6.028-2.109 8.588-2.712 2.41-.603 4.52-.904 6.328-.904 5.122 0 9.34 1.959 12.656 5.876 3.164 3.917 4.746 8.738 4.746 14.464 0 4.219-.904 8.588-2.712 13.108-1.959 4.37-4.67 8.287-8.136 11.752-3.616 3.616-7.835 6.629-12.656 9.04-4.972 2.41-10.246 3.616-15.82 3.616Z" />
+                </svg>
+                <blockquote class="relative">
+                  <p class="text-lg tracking-tight text-slate-900">
+                    I'm trying to get a hold of someone in support, I'm in a lot of trouble right now and they are
+                    saying it has something to do with my books. Please get back to me right away.
+                  </p>
+                </blockquote>
+                <figcaption class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                  <div>
+                    <div class="font-display text-base text-slate-900">Amy Hahn</div>
+                    <div class="mt-1 text-sm text-slate-500">Director at Velocity Industries</div>
+                  </div>
+                  <div class="overflow-hidden rounded-full bg-slate-50">
+                    <img alt="" class="h-14 w-14 object-cover"
+                      src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+
+            <!-- Column 2 -->
+            <li class="flex flex-col gap-y-6 sm:gap-y-8">
+              <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                <svg aria-hidden="true" width="105" height="78" class="absolute left-6 top-6 fill-slate-100">
+                  <path
+                    d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 2.712.904 5.273 2.712 7.684 1.808 2.41 4.52 3.616 8.136 3.616 2.41 0 4.52-.301 6.328-.904 1.959-.603 3.767-1.205 5.424-1.808 3.616-1.205 7.082-1.808 10.396-1.808 6.178 0 11.376 2.26 15.594 6.78 4.369 4.37 6.554 9.642 6.554 15.82 0 6.328-2.26 11.748-6.78 16.272-4.52 4.52-10.246 6.78-17.176 6.78-6.028 0-11.301-1.507-15.82-4.52-4.52-3.013-8.287-7.232-11.301-12.657-3.164-5.424-5.124-11.447-5.876-18.079-1.055-6.028-1.055-11.974 0-17.853l-1.356.678c-1.808 5.723-2.712 11.522-2.712 17.401 0 5.122.904 9.944 2.712 14.464 1.959 4.37 4.821 7.91 8.588 10.622 3.917 2.712 8.663 4.068 14.238 4.068 4.821 0 8.964-1.055 12.43-3.164 3.616-2.109 6.328-5.122 8.136-9.04 1.959-4.068 2.938-8.738 2.938-14.012 0-5.122-1.205-9.416-3.616-12.882-2.26-3.466-5.574-5.273-9.944-5.424-3.314 0-6.629.603-9.944 1.808-3.164 1.205-6.028 2.109-8.588 2.712-2.41.603-4.52.904-6.328.904-5.122 0-9.34-1.959-12.656-5.876-3.164-3.917-4.746-8.738-4.746-14.464 0-4.219.904-8.588-2.712-13.108-1.959 4.37 4.67-8.287 8.136-11.752 3.616-3.616 7.835-6.629 12.656-9.04 4.972-2.41 10.246-3.616 15.82-3.616 6.328 0 11.974 1.507 16.95 4.52 5.122 3.013 9.19 7.232 12.204 12.657 3.164 5.273 5.273 11.146 6.328 17.627 1.205 6.328 1.205 12.506 0 18.531l1.356-.678c1.808-5.723 2.712-11.522 2.712-17.401 0-5.122-.904-9.944-2.712-14.464-1.959-4.37-4.821-7.91-8.588-10.622-3.917-2.712-8.663-4.068-14.238-4.068-4.821 0-8.964 1.055-12.43 3.164-3.616 2.109-6.328 5.122-8.136 9.04-1.959 4.068-2.938 8.738-2.938 14.012 0 5.122 1.205 9.416 3.616 12.882 2.26 3.466 5.574 5.273 9.944 5.424 3.314 0 6.629-.603 9.944-1.808 3.164-1.205 6.028-2.109 8.588-2.712 2.41-.603 4.52-.904 6.328-.904 5.122 0 9.34 1.959 12.656 5.876 3.164 3.917 4.746 8.738 4.746 14.464 0 4.219-.904 8.588-2.712 13.108-1.959 4.37-4.67 8.287-8.136 11.752-3.616 3.616-7.835 6.629-12.656 9.04-4.972 2.41-10.246 3.616-15.82 3.616Z" />
+                </svg>
+                <blockquote class="relative">
+                  <p class="text-lg tracking-tight text-slate-900">
+                    The best part about TaxPal is every time I pay my employees, my bank balance doesn’t go down like it
+                    used to. Looking forward to spending this extra cash when I figure out why my card is being
+                    declined.
+                  </p>
+                </blockquote>
+                <figcaption class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                  <div>
+                    <div class="font-display text-base text-slate-900">Leland Kiehn</div>
+                    <div class="mt-1 text-sm text-slate-500">Founder of Kiehn and Sons</div>
+                  </div>
+                  <div class="overflow-hidden rounded-full bg-slate-50">
+                    <img alt="" class="h-14 w-14 object-cover"
+                      src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
+                  </div>
+                </figcaption>
+              </figure>
+
+              <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                <svg aria-hidden="true" width="105" height="78" class="absolute left-6 top-6 fill-slate-100">
+                  <path
+                    d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 2.712.904 5.273 2.712 7.684 1.808 2.41 4.52 3.616 8.136 3.616 2.41 0 4.52-.301 6.328-.904 1.959-.603 3.767-1.205 5.424-1.808 3.616-1.205 7.082-1.808 10.396-1.808 6.178 0 11.376 2.26 15.594 6.78 4.369 4.37 6.554 9.642 6.554 15.82 0 6.328-2.26 11.748-6.78 16.272-4.52 4.52-10.246 6.78-17.176 6.78-6.028 0-11.301-1.507-15.82-4.52-4.52-3.013-8.287-7.232-11.301-12.657-3.164-5.424-5.124-11.447-5.876-18.079-1.055-6.028-1.055-11.974 0-17.853l-1.356.678c-1.808 5.723-2.712 11.522-2.712 17.401 0 5.122.904 9.944 2.712 14.464 1.959 4.37 4.821 7.91 8.588 10.622 3.917 2.712 8.663 4.068 14.238 4.068 4.821 0 8.964-1.055 12.43-3.164 3.616-2.109 6.328-5.122 8.136-9.04 1.959-4.068 2.938-8.738 2.938-14.012 0-5.122-1.205-9.416-3.616-12.882-2.26-3.466-5.574-5.273-9.944-5.424-3.314 0-6.629.603-9.944 1.808-3.164 1.205-6.028-2.109 8.588-2.712 2.41-.603 4.52-.904 6.328-.904 5.122 0 9.34 1.959 12.656 5.876 3.164 3.917 4.746 8.738 4.746 14.464 0 4.219-.904 8.588-2.712 13.108-1.959 4.37-4.67 8.287-8.136 11.752-3.616 3.616-7.835 6.629-12.656 9.04-4.972 2.41-10.246 3.616-15.82 3.616Z" />
+                </svg>
+                <blockquote class="relative">
+                  <p class="text-lg tracking-tight text-slate-900">
+                    There are so many things I had to do with my old software that I just don’t do at all with TaxPal.
+                    Suspicious but I can’t say I don’t love it.
+                  </p>
+                </blockquote>
+                <figcaption class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                  <div>
+                    <div class="font-display text-base text-slate-900">Erin Powlowski</div>
+                    <div class="mt-1 text-sm text-slate-500">COO at Armstrong Inc</div>
+                  </div>
+                  <div class="overflow-hidden rounded-full bg-slate-50">
+                    <img alt="" class="h-14 w-14 object-cover"
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+
+            <!-- Column 3 -->
+            <li class="flex flex-col gap-y-6 sm:gap-y-8">
+              <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                <svg aria-hidden="true" width="105" height="78" class="absolute left-6 top-6 fill-slate-100">
+                  <path
+                    d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 2.712.904 5.273 2.712 7.684 1.808 2.41 4.52 3.616 8.136 3.616 2.41 0 4.52-.301 6.328-.904 1.959-.603 3.767-1.205 5.424-1.808 3.616-1.205 7.082-1.808 10.396-1.808 6.178 0 11.376 2.26 15.594 6.78 4.369 4.37 6.554 9.642 6.554 15.82 0 6.328-2.26 11.748-6.78 16.272-4.52 4.52-10.246 6.78-17.176 6.78-6.028 0-11.301-1.507-15.82-4.52-4.52-3.013-8.287-7.232-11.301-12.657-3.164-5.424-5.124-11.447-5.876-18.079-1.055-6.028-1.055-11.974 0-17.853l-1.356.678c-1.808 5.723-2.712 11.522-2.712 17.401 0 5.122.904 9.944 2.712 14.464 1.959 4.37 4.821 7.91 8.588 10.622 3.917 2.712 8.663 4.068 14.238 4.068 4.821 0 8.964-1.055 12.43-3.164 3.616-2.109 6.328-5.122 8.136-9.04 1.959-4.068 2.938-8.738 2.938-14.012 0-5.122-1.205-9.416-3.616-12.882-2.26-3.466-5.574-5.273-9.944-5.424-3.314 0-6.629.603-9.944 1.808-3.164 1.205-6.028 2.109-8.588 2.712-2.41.603-4.52.904-6.328.904-5.122 0-9.34-1.959-12.656-5.876-3.164-3.917-4.746-8.738-4.746-14.464 0-4.219.904-8.588-2.712-13.108-1.959 4.37-4.67 8.287-8.136 11.752-3.616 3.616-7.835 6.629-12.656 9.04-4.972 2.41-10.246 3.616-15.82 3.616Z" />
+                </svg>
+                <blockquote class="relative">
+                  <p class="text-lg tracking-tight text-slate-900">
+                    I used to have to remit tax to the EU and with TaxPal I somehow don’t have to do that anymore.
+                    Nervous to travel there now though.
+                  </p>
+                </blockquote>
+                <figcaption class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                  <div>
+                    <div class="font-display text-base text-slate-900">Peter Renolds</div>
+                    <div class="mt-1 text-sm text-slate-500">Founder of West Inc</div>
+                  </div>
+                  <div class="overflow-hidden rounded-full bg-slate-50">
+                    <img alt="" class="h-14 w-14 object-cover"
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
+                  </div>
+                </figcaption>
+              </figure>
+
+              <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                <svg aria-hidden="true" width="105" height="78" class="absolute left-6 top-6 fill-slate-100">
+                  <path
+                    d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 2.712.904 5.273 2.712 7.684 1.808 2.41 4.52 3.616 8.136 3.616 2.41 0 4.52-.301 6.328-.904 1.959-.603 3.767-1.205 5.424-1.808 3.616-1.205 7.082-1.808 10.396-1.808 6.178 0 11.376 2.26 15.594 6.78 4.369 4.37 6.554 9.642 6.554 15.82 0 6.328-2.26 11.748-6.78 16.272-4.52 4.52-10.246 6.78-17.176 6.78-6.028 0-11.301-1.507-15.82-4.52-4.52-3.013-8.287-7.232-11.301-12.657-3.164-5.424-5.124-11.447-5.876-18.079-1.055-6.028-1.055-11.974 0-17.853l-1.356.678c-1.808 5.723-2.712 11.522-2.712 17.401 0 5.122.904 9.944 2.712 14.464 1.959 4.37 4.821 7.91 8.588 10.622 3.917 2.712 8.663 4.068 14.238 4.068 4.821 0 8.964-1.055 12.43-3.164 3.616-2.109 6.328-5.122 8.136-9.04 1.959-4.068 2.938-8.738 2.938-14.012 0-5.122-1.205-9.416-3.616-12.882-2.26-3.466-5.574-5.273-9.944-5.424-3.314 0-6.629.603-9.944 1.808-3.164 1.205-6.028 2.109-8.588-2.712-2.41.603-4.52.904-6.328.904-5.122 0-9.34-1.959-12.656-5.876-3.164-3.917-4.746-8.738-4.746-14.464 0-4.219.904-8.588-2.712-13.108-1.959 4.37-4.67 8.287-8.136 11.752-3.616 3.616-7.835 6.629-12.656 9.04-4.972 2.41-10.246 3.616-15.82 3.616Z" />
+                </svg>
+                <blockquote class="relative">
+                  <p class="text-lg tracking-tight text-slate-900">
+                    This is the fourth email I’ve sent to your support team. I am literally being held in jail for tax
+                    fraud. Please answer your damn emails, this is important.
+                  </p>
+                </blockquote>
+                <figcaption class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                  <div>
+                    <div class="font-display text-base text-slate-900">Amy Hahn</div>
+                    <div class="mt-1 text-sm text-slate-500">Director at Velocity Industries</div>
+                  </div>
+                  <div class="overflow-hidden rounded-full bg-slate-50">
+                    <img alt="" class="h-14 w-14 object-cover"
+                      src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section id="pricing" aria-label="Pricing" class="bg-slate-900 py-20 sm:py-32">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="md:text-center">
+            <h2 class="font-display text-3xl tracking-tight text-white sm:text-4xl">
+              <span class="relative whitespace-nowrap"><svg aria-hidden="true" viewBox="0 0 281 40"
+                  class="absolute -left-2 -top-1 -bottom-1 -right-2 h-full w-full fill-blue-400/20"
+                  preserveAspectRatio="none">
+                  <path
+                    d="M255.475 23.796c-5.745 3.906-10.07 10.359-16.635 12.368-13.688 4.19-37.47 1.713-51.97 2.624-26.745 1.68-53.689 3.929-80.601 2.563-26.91-1.366-53.847-3.667-80.586-7.349C18.429 32.965 4.865 32.427 2.339 22.25c-2.527-10.178 13.53-17.703 24.333-20.534 37.904-9.932 78.497-1.638 117.666-1.821 39.17-.183 78.751-6.09 117.199 1.127 18.535 3.479 23.6 19.135 14.038 22.774Z">
+                  </path>
+                </svg><span class="relative">Simple pricing,</span></span> for everyone.
+            </h2>
+            <p class="mt-4 text-lg text-slate-400">
+              It doesn’t matter what size your business is, our software won’t work well for you.
+            </p>
+          </div>
+          <div
+            class="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
+            <!-- Plan 1 -->
+            <section class="flex flex-col rounded-3xl px-6 sm:px-8 lg:py-8">
+              <h3 class="font-display text-lg text-white">Starter</h3>
+              <p class="mt-2 text-base text-slate-400">Good for anyone who is self-employed and just getting started.
+              </p>
+              <p class="order-last mt-6 flex flex-col text-sm text-slate-400">
+                <span class="font-display text-4xl font-bold text-white">$9</span>
+                <span>per month</span>
+              </p>
+              <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 ring-1 ring-inset ring-white/10 text-white hover:bg-white/5 hover:ring-white/20 active:bg-white/10 active:text-white focus-visible:outline-white mt-8"
+                href="/register">Get started</a>
+              <ul role="list" class="order-last mt-10 flex flex-col gap-y-3 text-sm text-slate-200">
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Send 10 quotes and invoices</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Connect up to 2 bank accounts</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Track up to 15 expenses per month</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Manual payroll support</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Export up to 3 reports</span>
+                </li>
+              </ul>
+            </section>
+            <!-- Plan 2 -->
+            <section class="flex flex-col rounded-3xl px-6 sm:px-8 lg:py-8 bg-blue-600 order-first lg:order-none">
+              <h3 class="font-display text-lg text-white">Small Business</h3>
+              <p class="mt-2 text-base text-blue-100">Perfect for small / medium sized businesses.</p>
+              <p class="order-last mt-6 flex flex-col text-sm text-blue-100">
+                <span class="font-display text-4xl font-bold text-white">$15</span>
+                <span>per month</span>
+              </p>
+              <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white mt-8"
+                href="/register">Get started</a>
+              <ul role="list" class="order-last mt-10 flex flex-col gap-y-3 text-sm text-white">
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Send 25 quotes and invoices</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Connect up to 5 bank accounts</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Track up to 50 expenses per month</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Automated payroll support</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Export up to 12 reports</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Bulk reconcile transactions</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Track in multiple currencies</span>
+                </li>
+              </ul>
+            </section>
+            <!-- Plan 3 -->
+            <section class="flex flex-col rounded-3xl px-6 sm:px-8 lg:py-8">
+              <h3 class="font-display text-lg text-white">Enterprise</h3>
+              <p class="mt-2 text-base text-slate-400">For even the biggest enterprise companies.</p>
+              <p class="order-last mt-6 flex flex-col text-sm text-slate-400">
+                <span class="font-display text-4xl font-bold text-white">$39</span>
+                <span>per month</span>
+              </p>
+              <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 ring-1 ring-inset ring-white/10 text-white hover:bg-white/5 hover:ring-white/20 active:bg-white/10 active:text-white focus-visible:outline-white mt-8"
+                href="/register">Get started</a>
+              <ul role="list" class="order-last mt-10 flex flex-col gap-y-3 text-sm text-slate-200">
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Send unlimited quotes and invoices</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Connect up to 15 bank accounts</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Track up to 200 expenses per month</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Automated payroll support</span>
+                </li>
+                <li class="flex">
+                  <svg aria-hidden="true" class="h-6 w-6 flex-none fill-current stroke-current text-white"
+                    viewBox="0 0 24 24">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                  </svg>
+                  <span class="ml-4">Export up to 25 reports, including TPS</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" aria-label="Frequently asked questions"
+        class="relative overflow-hidden bg-slate-50 py-20 sm:py-32">
+        <div class="absolute top-0 left-1/2 -translate-x-[30%] -translate-y-[25%]">
+          <img src="https://salient.tailwindui.com/_next/static/media/background-faqs.55d2e36a.jpg" alt=""
+            class="w-[100rem] max-w-none opacity-20" loading="lazy">
+        </div>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+          <div class="mx-auto max-w-2xl md:text-center">
+            <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">Frequently asked questions</h2>
+            <p class="mt-4 text-lg tracking-tight text-slate-700">If you can’t find what you’re looking for, email our
+              support team and if you’re lucky someone will get back to you.</p>
+          </div>
+          <ul role="list" class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+            <li>
+              <ul role="list" class="flex flex-col gap-y-8">
+                <li>
+                  <h3 class="font-display text-lg leading-7 text-slate-900">Does TaxPal handle VAT?</h3>
+                  <p class="mt-4 text-sm text-slate-700">Well no, but if you move your company offshore you can probably
+                    ignore it.</p>
+                </li>
+                <li>
+                  <h3 class="font-display text-lg leading-7 text-slate-900">Can I pay for my subscription via purchase
+                    order?</h3>
+                  <p class="mt-4 text-sm text-slate-700">Absolutely, we are happy to take your money in all forms.</p>
+                </li>
+                <li>
+                  <h3 class="font-display text-lg leading-7 text-slate-900">How do I apply for a job at TaxPal?</h3>
+                  <p class="mt-4 text-sm text-slate-700">We only hire our customers, so subscribe for a minimum of 6
+                    months and then let’s talk.</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul role="list" class="flex flex-col gap-y-8">
+                <li>
+                  <h3 class="font-display text-lg leading-7 text-slate-900">What was that story about losing my data?
+                  </h3>
+                  <p class="mt-4 text-sm text-slate-700">That was a total misunderstanding. It was only a small subset
+                    of data and it was mostly just old receipts.</p>
+                </li>
+                <li>
+                  <h3 class="font-display text-lg leading-7 text-slate-900">How do I generate a report?</h3>
+                  <p class="mt-4 text-sm text-slate-700">You just tell us what data you need a report for, and we get
+                    our kids to create beautiful charts for you using only the finest crayons.</p>
+                </li>
+                <li>
+                  <h3 class="font-display text-lg leading-7 text-slate-900">Can we expect more inventory features?</h3>
+                  <p class="mt-4 text-sm text-slate-700">In life it’s really better to never expect anything at all.</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul role="list" class="flex flex-col gap-y-8">
+                <li>
+                  <h3 class="font-display text-lg leading-7 text-slate-900">I lost my password, how do I get into my
+                    account?</h3>
+                  <p class="mt-4 text-sm text-slate-700">Send us an email and we will send you a copy of your password
+                    in plain text.</p>
+                </li>
+                <li>
+                  <h3 class="font-display text-lg leading-7 text-slate-900">Can I export my data?</h3>
+                  <p class="mt-4 text-sm text-slate-700">Yes, you can export your data as a PDF file that is almost
+                    impossible to parse.</p>
+                </li>
+                <li>
+                  <h3 class="font-display text-lg leading-7 text-slate-900">My bank feed isn’t working, what do I do?
+                  </h3>
+                  <p class="mt-4 text-sm text-slate-700">This is a known issue. We recommend you just manually enter
+                    your transactions for now.</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer class="bg-slate-50 py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+          <div class="flex gap-x-6 text-sm font-medium text-slate-700">
+            <a class="hover:text-slate-900" href="#features">Features</a>
+            <a class="hover:text-slate-900" href="#testimonials">Testimonials</a>
+            <a class="hover:text-slate-900" href="#pricing">Pricing</a>
+          </div>
+          <p class="text-sm text-slate-500">© 2024 Salient Clone. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
