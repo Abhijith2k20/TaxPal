@@ -35,6 +35,18 @@ if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMenu);
 if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
 if (mobileMenu) mobileMenu.addEventListener('click', toggleMenu);
 
+// Close mobile menu when clicking on navigation links
+const mobileNavLinks = document.querySelectorAll('#mobile-menu-panel a');
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Close the menu when a link is clicked
+        if (!mobileMenu.classList.contains('hidden')) {
+            toggleMenu();
+        }
+    });
+});
+
+
 
 
 // Features Section Tab Switching
